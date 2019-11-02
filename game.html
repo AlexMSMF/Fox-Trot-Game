@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="game.css" />
+    <link
+      rel="stylesheet"
+      href="./font-awesome/fontawesome-free-5.11.2-web/css/fontawesome.min.css"
+    />
+    <link rel="icon" href="./images/favicon-fox.png" />
+
+    <title>Fox Trot</title>
+  </head>
+
+  <body>
+    <div class="titleDiv">
+      <div class="title">
+        <h1 class="header">FOX TROT</h1>
+      </div>
+      <div class="imageTitle">
+        <img src="./images/fox-logo.png" width="90px" height="40px" alt="" />
+      </div>
+    </div>
+
+    <div id="story">
+      <div class="beginImage">
+        <div class="buttons">
+          <div class="startGame">
+            <button id="startGame" class="btn">Play the Game</button>
+            <button id="instGame" class="btn">Instructions</button>
+          </div>
+          <div class="music">
+            <button class="button" id="btn">Play Music</button>
+            <button class="button" id="btn1">Stop Music</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <audio autoplay id="audio"></audio>
+    <audio autoplay id="audio1"></audio>
+
+    <div id="gamePlay" style="display: none">
+      <div class="textInstructions">
+        <h5>
+          <p>
+            You are <span class="trot"> Trot</span>! A little, but bright
+            <span class="trot">Fox</span>.
+          </p>
+
+          Your favourite meal is <span class="chicken">Chicken</span>, but you
+          can't say no to a good <span class="rabbit">Rabbit</span>, even if
+          your stomach gets a little grumpy. <br />
+          <br />
+          You need to catch that damn
+          <span class="chicken">Chicken</span>....And since you're taking the
+          trouble, get that damn <span class="rabbit">Rabbit</span> too... I'm
+          starving.
+          <br />
+          <br />
+
+          But be careful, the <span class="hunter">Hunters</span> are out again
+          and they really like your fur... <br />
+          Well, not as much as you of course, but close. <br />
+          <br />
+
+          Oh....And one more little detail before I go... <br />
+
+          The <span class="chicken">Chicken</span> and the
+          <span class="rabbit">Rabbit</span> sort of have
+          <span class="tele">Teleportation Powers</span>
+          eheheh..eh...... Easy Peasy!
+          <br />
+          <br />
+
+          Move that <span class="trot">Foxy Trotty</span> ass with the Arrow
+          keys:
+        </h5>
+        <div class="rulesInstructions">
+          <div class="instructionText">
+            <h4>
+              <i class="fas fa-arrow-up"></i> &nbsp; &nbsp;is
+              <span class="trot">Up</span>
+              <br />
+              <br />
+              <i class="fas fa-arrow-down"></i> &nbsp; &nbsp; is
+              <span class="trot">Down</span>
+              <br />
+              <br />
+              <i class="fas fa-arrow-right"></i> &nbsp; &nbsp; is left.... Just
+              kidding: is <span class="trot">Right</span> <br />
+              <br />
+              <i class="fas fa-arrow-left"></i> &nbsp; &nbsp; is...You guessed
+              it:
+              <span class="trot">Left</span>
+              <br />
+              <br />
+              I knew you were a bright <span class="trot">Fox</span>
+            </h4>
+          </div>
+          <div class="rules">
+            <h4>
+              <img
+                src="./images/chicken-icon.png"
+                width="30"
+                height="30"
+                alt="Chicken"
+              />
+              <span class="chicken">Chickens</span> are worth
+              <span class="tele">5 points</span> (Ehh, not bad my friend)
+              <br />
+              <img
+                src="./images/rabbit-icon.png"
+                width="30"
+                height="30"
+                alt="Rabbit"
+              />
+              <span class="rabbit">Rabbits</span> are worth
+              <span class="tele">2 points</span> (Thank me later) <br />
+              <br />
+              <img
+                src="./images/hunter-icon.png"
+                width="30"
+                height="30"
+                alt="Hunter"
+              />
+              If those evil <span class="hunter">Hunters</span> touch you
+              <span class="tele">3 times</span>, you're done pal! <br /><br />
+
+              <img
+                src="./images/cao_completo-icon.png"
+                width="45"
+                height="30"
+                alt="Dog"
+              />
+              <span class="rabbit">Dog</span> wanna play but it will cost you
+              <span class="tele">3 points</span> (Friends, am I right?)
+              <br />
+              <br />
+
+              <i class="fas fa-stopwatch"></i> &nbsp; &nbsp; You got
+              <span class="tele">1 minute</span> to prove you're worthy of my
+              cookings <br />
+            </h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="instructionPlay">
+        <button id="startGameInstruction" class="btnIns">Go get' em</button>
+      </div>
+    </div>
+
+    <div id="finalScreenWin" style="display: none;">
+      <div class="finalImageWin">
+        <h1 id="scoreText"></h1>
+        <button id="startGameAgainWin" class="btnWin">Play Again</button>
+      </div>
+    </div>
+
+    <div id="finalScreenLoose" style="display: none;">
+      <div class="finalImageLoose">
+        <div class="textLoser">
+          <h2 class="looser">Well, You're not such a bright Fox after all</h2>
+        </div>
+        <div class="startGameAgain">
+          <button id="startGameAgain" class="btnLoose">Play the Game</button>
+          <button id="instGameAgain" class="btnLoose">Instructions</button>
+        </div>
+      </div>
+    </div>
+
+   
+
+    <div id="canvasLoc" style="display: none;">
+      <button class="btnStop" id="btnStop">Stop Music</button>
+      <canvas id="canvas" width="650" height="550"></canvas>
+    </div>
+
+    <script src="./scripts/music.js"></script>
+    <script src="./scripts/beginGame.js"></script>
+
+    <script src="./scripts/Characters/fox.js"></script>
+    <script src="./scripts/Characters/hunter.js"></script>
+    <script src="./scripts/Characters/dog.js"></script>
+    <script src="./scripts/Characters/rabbit.js"></script>
+    <script src="./scripts/Characters/chicken.js"></script>
+    <script src="./scripts/score-and-EndGame.js"></script>
+
+    <script src="./scripts/collisions.js"></script>
+    <script src="./scripts/finishGame.js"></script>
+  </body>
+</html>
