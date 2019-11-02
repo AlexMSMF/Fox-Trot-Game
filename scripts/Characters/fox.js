@@ -113,7 +113,7 @@ function foxLocation() {
   }
 
   if (x > 650) {
-    x = 630;
+    x = 620;
   } else if (x < 0) {
     x = 0;
   }

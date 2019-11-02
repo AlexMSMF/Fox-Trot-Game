@@ -57,8 +57,37 @@ function counterAtZero() {
     scoreText.innerHTML = `Well done little <span class="trotWin"> Fox</span> <br/> You scored <span class="trotWin"> ${showScore}</span> points and you've been hit <span class="trotWin"> ${showLifes}</span> times`;
     audio.src = "./Music/Spring-Waltz-saiB.mp3";
     audio1.src = "";
+    if (counter <= 0 && scores <= 0) {
+      canvasLoc.style.display = "none";
+      story.style.display = "none";
+      finalScreenWin.style.display = "none";
+      finalScreenLoose.style.display = "flex";
+      showScore = scores;
+      audio.src = "./Music/loose-sound.mp3";
+
+      counter = 60;
+      lifes = 3;
+      scores = 0;
+    }
     counter = 90;
     lifes = 3;
     scores = 0;
   }
+}
+
+function pointsAtZero() {
+  if (counter <= 0 && scores <= 0) {
+    canvasLoc.style.display = "none";
+    story.style.display = "none";
+    finalScreenLoose.style.display = "flex";
+    showScore = scores;
+    audio.src = "./Music/loose-sound.mp3";
+
+    counter = 60;
+    lifes = 3;
+    scores = 0;
+  }
+
+  x = 325;
+  y = 480;
 }
