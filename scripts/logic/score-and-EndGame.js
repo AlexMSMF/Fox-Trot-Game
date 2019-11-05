@@ -20,18 +20,16 @@ function drawTime() {
 
 // LIFES!!!---------------
 function lifesRemaining() {
-  ctx.fillStyle = "#fff"; //color for your text
-  ctx.font = "15px Arial"; //font style and size
+  ctx.fillStyle = "#fff";
+  ctx.font = "15px Arial";
   ctx.fillText(`Life: ${lifes} `, 300, 15);
 }
 
 // SCORE!!!!!---------------
 
 function score() {
-  //   ctx.fillStyle = "#E7E0CA"; //your rect color
-  //   ctx.fillRect(0, 0, 650, 20); //your rect size
-  ctx.fillStyle = "#fff"; //color for your text
-  ctx.font = "15px Arial"; //font style and size
+  ctx.fillStyle = "#fff";
+  ctx.font = "15px Arial";
   ctx.fillText(`Score: ${scores}`, 550, 15);
 }
 

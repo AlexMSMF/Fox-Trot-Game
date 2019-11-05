@@ -33,60 +33,6 @@ var currentFrameRabbit = 0;
   (upRabbit = true),
   (downRabbit = true);
 
-// function moveUpRabbit() {
-//   yRabbit -= 10;
-//   srcYRabbit -= 10;
-//   upRabbit = true;
-//   leftRabbit = false;
-//   rightRabbit = false;
-//   downRabbit = false;
-// }
-
-// function moveDownRabbit() {
-//   yRabbit += 10;
-//   srcY += 10;
-//   downRabbit = true;
-//   upRabbit = false;
-//   leftRabbit = false;
-//   rightRabbit = false;
-// }
-
-// function moveLeftRabbit() {
-//   xRabbit -= 10;
-//   srcXRabbit -= 10;
-//   leftRabbit = true;
-//   upRabbit = false;
-//   rightRabbit = false;
-//   downRabbit = false;
-// }
-
-// function moveRightRabbit() {
-//   xRabbit += 10;
-//   srcXRabbit += 10;
-//   rightRabbit = true;
-//   upRabbit = false;
-//   leftRabbit = false;
-//   downRabbit = false;
-// }
-
-// document.addEventListener("keydown", function(e) {
-//   switch (e.keyCode) {
-//     case 38:
-//       moveUpRabbit();
-//       break;
-//     case 40:
-//       moveDownRabbit();
-//       break;
-//     case 37:
-//       moveLeftRabbit();
-//       break;
-//     case 39:
-//       moveRightRabbit();
-//       break;
-//   }
-//   updateCanvasRabbit();
-// });
-
 //UPDATE FRAMES
 
 function updateFrameRabbit() {

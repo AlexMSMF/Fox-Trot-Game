@@ -1,5 +1,3 @@
-//FOX PLAYER 2--------
-//ALL THE VARIABLES NEEDED FOR SPRITESHEET
 var dogPlayer = new Image();
 dogPlayer.src = "./images/cao_completo.png";
 
@@ -34,73 +32,6 @@ var currentFrameDog = 0;
   (upDog = true),
   (downDog = true),
   (stayDog = true);
-
-// function moveUpDog() {
-//   yDog -= 10;
-//   srcYDog -= 10;
-//   upDog = true;
-//   leftDog = false;
-//   rightDog = false;
-//   downDog = false;
-//   stayDog = false;
-// }
-
-// function moveDownDog() {
-//   yDog += 10;
-//   srcYDog += 10;
-//   downDog = true;
-//   upDog = false;
-//   leftDog = false;
-//   rightDog = false;
-//   stayDog = false;
-// }
-
-// function moveLeftDog() {
-//   xDog -= 10;
-//   srcXDog -= 10;
-//   rightDog = true;
-//   upDog = false;
-//   leftDog = false;
-//   downDog = false;
-//   stayDog = false;
-// }
-
-// function moveRightDog() {
-//   xDog += 10;
-//   srcXDog += 10;
-//   leftDog = true;
-//   upDog = false;
-//   rightDog = false;
-//   downDog = false;
-//   stayDog = false;
-// }
-
-// function stayQuiet() {
-//   leftDog = false;
-//   upDog = false;
-//   rightDog = false;
-//   downDog = false;
-//   stayDog = true;
-// }
-
-// document.addEventListener("keydown", function(e) {
-//   switch (e.keyCode) {
-//     case 87:
-//       moveUpDog();
-//       break;
-//     case 83:
-//       moveDownDog();
-//       break;
-//     case 65:
-//       moveLeftDog();
-//       break;
-//     case 68:
-//       moveRightDog();
-//       break;
-//     default:
-//   }
-//   updateCanvasDog();
-// });
 
 //UPDATE FRAMES
 
@@ -163,7 +94,6 @@ function startRunDog() {
     vlX_Dog = vlX_Dog * -1;
     xDog = 580;
     yDog = y;
-    // yDog = Math.floor(Math.random() * (maxYDog - minYDog) + minYDog);
   }
 }
 

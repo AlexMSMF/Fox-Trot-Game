@@ -119,6 +119,3 @@ function updateLeftHunter() {
 }
 
 setInterval(updateLeftHunter, 200);
-
-// drawHunterRight(ctx, hunterRight);
-// drawHunterLeft(ctx, hunterLeft);

@@ -35,60 +35,6 @@ var currentFrameChicken = 0;
   (upChicken = true),
   (downChicken = true);
 
-// function moveUpChicken() {
-//   yChicken -= 10;
-//   srcYChicken -= 10;
-//   upChicken = true;
-//   leftChicken = false;
-//   rightChicken = false;
-//   downChicken = false;
-// }
-
-// function moveDownChicken() {
-//   yChicken += 10;
-//   srcYChicken += 10;
-//   downChicken = true;
-//   upChicken = false;
-//   leftChicken = false;
-//   rightChicken = false;
-// }
-
-// function moveLeftChicken() {
-//   xChicken -= 10;
-//   srcXChicken -= 10;
-//   rightChicken = true;
-//   upChicken = false;
-//   leftChicken = false;
-//   downChicken = false;
-// }
-
-// function moveRightChicken() {
-//   xChicken += 10;
-//   srcXChicken += 10;
-//   leftChicken = true;
-//   upChicken = false;
-//   rightChicken = false;
-//   downChicken = false;
-// }
-
-// document.addEventListener("keydown", function(e) {
-//   switch (e.keyCode) {
-//     case 87:
-//       moveUpChicken();
-//       break;
-//     case 83:
-//       moveDownChicken();
-//       break;
-//     case 65:
-//       moveLeftChicken();
-//       break;
-//     case 68:
-//       moveRightChicken();
-//       break;
-//   }
-//   updateCanvasChicken();
-// });
-
 //UPDATE FRAMES
 
 function updateFrameChicken() {
