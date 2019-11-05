@@ -91,9 +91,9 @@ function collidesHunterLeft() {
 
 function collidesDog() {
   if (
-    x < xDog + (widthColDog - 10) &&
-    x + (widthCol - 10) > xDog &&
-    y < yDog + (heightRowDog - 50) &&
+    x < xDog + widthColDog &&
+    x + widthCol > xDog &&
+    y < yDog + (heightRowDog - 20) &&
     y + (heightRow - 10) > yDog
   ) {
     scores = scores - 3;

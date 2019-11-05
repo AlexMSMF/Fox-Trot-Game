@@ -78,6 +78,7 @@ function pointsAtZero() {
     showScore = scores;
     audio.src = "./Music/loose-sound.mp3";
   }
+
   counter = 60;
   lifes = 3;
   scores = 0;
