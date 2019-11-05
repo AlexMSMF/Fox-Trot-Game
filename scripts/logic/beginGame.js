@@ -17,13 +17,11 @@ let canvasAppear = () => {
   audio.src = "./Music/chip-song.ogg";
   audio.loop = true;
   counter = 60;
-  counterAtZero();
 };
 
 let instructionButton = () => {
   gamePlay.style.display = "";
   story.style.display = "none";
-  lifes = 3;
 };
 
 let canvasAppearInstructions = () => {

@@ -38,7 +38,7 @@ function collidesHunterRight() {
     y + (heightRow - 20) > hunterRightY
   ) {
     lifes--;
-    showLifes++;
+
     audio1.src = "./Music/ouch.mp3";
 
     if (lifes <= 0) {
@@ -67,7 +67,7 @@ function collidesHunterLeft() {
     y + (heightRow - 20) > hunterLeftY
   ) {
     lifes--;
-    showLifes++;
+
     audio1.src = "./Music/ouch.mp3";
 
     if (lifes <= 0) {
@@ -91,7 +91,7 @@ function collidesHunterLeft() {
 
 function collidesDog() {
   if (
-    x < xDog + (widthColDog - 30) &&
+    x < xDog + (widthColDog - 10) &&
     x + (widthCol - 10) > xDog &&
     y < yDog + (heightRowDog - 50) &&
     y + (heightRow - 10) > yDog

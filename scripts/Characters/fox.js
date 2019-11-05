@@ -7,7 +7,7 @@ let ctx = canvas.getContext("2d");
 var foxPlayer = new Image();
 foxPlayer.src = "./images/fox-1.1/PNG/48x64/fox-NESW-bright.png";
 
-let x = 325;
+let x = 20;
 let y = 480;
 let srcX;
 let srcY;

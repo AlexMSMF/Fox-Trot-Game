@@ -19,7 +19,7 @@ let canvasAppearAfterWin = () => {
   counter = 60;
   lifes = 3;
   scores = 0;
-  x = 325;
+  x = 20;
   y = 480;
 };
 
@@ -33,7 +33,7 @@ let canvasAppearAfterLoose = () => {
   counter = 60;
   lifes = 3;
   scores = 0;
-  x = 325;
+  x = 20;
   y = 480;
 };
 
@@ -42,6 +42,7 @@ let instructionButtonAfterLoose = () => {
   story.style.display = "none";
   finalScreenLoose.style.display = "none";
   finalScreenWin.style.display = "none";
+  lifes = 3;
 };
 
 restartGameWin.addEventListener("click", canvasAppearAfterWin);

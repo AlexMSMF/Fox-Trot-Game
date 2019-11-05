@@ -2,11 +2,11 @@ canvas = document.getElementById("canvas");
 ctx = canvas.getContext("2d");
 
 let counter = 1000;
-let elapsedTime = 0;
+let elapsedTime;
 let lifes = 3;
 let scores = 0;
 let showScore;
-let showLifes = 0;
+let showLifes;
 let min;
 let sec;
 
@@ -37,7 +37,6 @@ function score() {
 
 function counterAtZero() {
   counter = counter - 0.1;
-
   if (counter >= 120) {
     min = 2;
     sec = counter % 60;
@@ -53,25 +52,20 @@ function counterAtZero() {
     finalScreenLoose.style.display = "none";
     finalScreenWin.style.display = "";
     showScore = scores;
-    showLifes;
+    if (lifes === 3) {
+      showLifes = 0;
+    } else if (lifes === 2) {
+      showLifes = 1;
+    } else {
+      showLifes = 2;
+    }
     scoreText.innerHTML = `Well done little <span class="trotWin"> Fox</span> <br/> You scored <span class="trotWin"> ${showScore}</span> points and you've been hit <span class="trotWin"> ${showLifes}</span> times`;
     audio.src = "./Music/Spring-Waltz-saiB.mp3";
     audio1.src = "";
-    if (counter <= 0 && scores <= 0) {
-      canvasLoc.style.display = "none";
-      story.style.display = "none";
-      finalScreenWin.style.display = "none";
-      finalScreenLoose.style.display = "flex";
-      showScore = scores;
-      audio.src = "./Music/loose-sound.mp3";
+    x = 20;
+    y = 480;
 
-      counter = 60;
-      lifes = 3;
-      scores = 0;
-    }
-    counter = 90;
-    lifes = 3;
-    scores = 0;
+    pointsAtZero();
   }
 }
 
@@ -80,14 +74,14 @@ function pointsAtZero() {
     canvasLoc.style.display = "none";
     story.style.display = "none";
     finalScreenLoose.style.display = "flex";
+    finalScreenWin.style.display = "none";
     showScore = scores;
     audio.src = "./Music/loose-sound.mp3";
-
-    counter = 60;
-    lifes = 3;
-    scores = 0;
   }
+  counter = 60;
+  lifes = 3;
+  scores = 0;
 
-  x = 325;
+  x = 20;
   y = 480;
 }

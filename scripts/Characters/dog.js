@@ -127,7 +127,7 @@ function updateFrameDog() {
 function drawDogRun(ctx, dogPlayer) {
   if (!dogPlayer.complete) {
     setTimeout(function() {
-      drawHDogRun(ctx, dogPlayer);
+      drawDogRun(ctx, dogPlayer);
     }, 50);
     return;
   }
