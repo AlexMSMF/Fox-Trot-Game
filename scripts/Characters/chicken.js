@@ -1,5 +1,8 @@
+canvas = document.getElementById("canvas");
+ctx = canvas.getContext("2d");
+
 var chickenPlayer = new Image();
-chickenPlayer.src = "../images/chicken.png";
+chickenPlayer.src = "./images/chicken.png";
 
 let xChicken;
 let yChicken;
@@ -137,9 +140,10 @@ setInterval(function() {
 
 function updateCanvasChicken() {
   ctx.clearRect(0, 0, srcXChicken, srcYChicken);
+  drawImageChicken();
   drawImage();
   foxLocation();
-  drawImageChicken();
+
   drawImageRabbit();
   drawImageDog();
 

@@ -1,11 +1,12 @@
 //HUNTER ENEMY
-canvas = document.getElementById("canvas");
-
-ctx = canvas.getContext("2d");
 
 let hunterRight = new Image();
 
 hunterRight.src = "./images/hunter-right.png";
+
+canvas = document.getElementById("canvas");
+
+ctx = canvas.getContext("2d");
 
 hunterRightX = 0;
 hunterRightY = 0;
